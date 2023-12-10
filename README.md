@@ -1,6 +1,6 @@
 # BLM——B站直播监控
 
-#### 0x1.食材准备
+### 0x1.食材准备
 
 ​	1.`pip install -r requirement.txt`
 
@@ -8,7 +8,7 @@
 
 ​	3.修改直播分区，如果你知道你的直播分区ID，可以直接修改`live.py`中liveid。在不知道分类ID的情况下，可以在终端执行`liveid.py`，选择对应主分区，找到你的分区ID。
 
-#### 0x2.食用方法
+### 0x2.食用方法
 
 ​	1.请将本项目放在`kplayer`的目录下，确保项目目录为`./kplayer/BLM/live.py`
 
