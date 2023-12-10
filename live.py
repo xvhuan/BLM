@@ -5,6 +5,8 @@ import subprocess
 import psutil
 import requests
 
+from live_rtmp import get_live_rtmp_url
+
 liveid = '624'  # 填写直播分类id
 roomid = '7681777' #填写房间号
 
@@ -56,8 +58,10 @@ if status == 2:
                 except Exception as e:
                     print(f"无法终止进程: {e}")
 
+    new_rtmp = get_live_rtmp_url()
     command = "../kplayer play start --daemon"
 
     subprocess.Popen(command, shell=True)
 
     exit("我滴任务完成辣")
+exit("还在直播中")
