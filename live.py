@@ -6,7 +6,7 @@ import psutil
 import requests
 
 liveid = '624'  # 填写直播分类id
-
+roomid = '7681777' #填写房间号
 
 def is_process_running(process_name):
     """
@@ -18,7 +18,7 @@ def is_process_running(process_name):
     return False
 
 
-urlStatus = "https://api.live.bilibili.com/xlive/web-room/v1/index/getRoomBaseInfo?room_ids=7681777&req_biz=link-center"
+urlStatus = f"https://api.live.bilibili.com/xlive/web-room/v1/index/getRoomBaseInfo?room_ids={roomid}&req_biz=link-center"
 headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.9 '
                   'Safari/537.36'
@@ -54,7 +54,7 @@ if status == 2:
                     # 使用terminate方法终止进程
                     psutil.Process(process.info['pid']).terminate()
                 except Exception as e:
-                    print("无法终止进程: {e}")
+                    print(f"无法终止进程: {e}")
 
     command = "../kplayer play start --daemon"
 
