@@ -17,16 +17,13 @@ jsonCodeUrl = jsonRequest["data"]["url"]
 jsonOauthKey = jsonRequest["data"]["qrcode_key"]
 
 #  来，展示！
-qr = qrcode.QRCode(
-    version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_L,
-    box_size=1,
-    border=0,
-)
+qr = qrcode.QRCode()
 qr.add_data(jsonCodeUrl)
-qr.make(fit=True)
-qr.make_image(fill_color="black", back_color="white")
-qr.print_ascii(invert=True)
+qr.make()
+qr_img = qr.make_image(fill_color="black", back_color="white")
+
+qr_img.save("qrcode.png")
+qr.print_ascii()
 
 #  获取返回信息
 input("扫码后回车")
