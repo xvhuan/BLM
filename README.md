@@ -25,3 +25,6 @@
 #### 0x3.遗言
 
 v我50
+
+------
+[![Star History Chart](https://api.star-history.com/svg?repos=xvhuan/BLM&type=Date)](https://star-history.com/#xvhuan/BLM&Date)
