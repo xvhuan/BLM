@@ -31,7 +31,7 @@ result = json.loads(response.text)
 roomid = result['data']["by_room_ids"]
 index, value = next(iter(roomid.items()))
 status = value["live_status"]
-if status == 2:
+if status == 0:
     with open("ck.txt", "r") as f:
         ck = f.read()
     pattern = r'bili_jct=([^;]+)'
